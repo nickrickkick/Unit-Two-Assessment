@@ -74,6 +74,8 @@ console.log(pizza['tags'][1]);
 */
 
 //CODE HERE
+const {price: Price} = pizza;
+console.log(Price);
 
 
 /*
@@ -84,7 +86,8 @@ console.log(pizza['tags'][1]);
 */
 
 //CODE HERE
-
+const {category: props} = pizza;
+console.log(props);
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -99,6 +102,48 @@ console.log(pizza['tags'][1]);
 */
 
 //CODE HERE
+const foodArr = [
+    {
+        "name": 'beef soup',
+        "price": 6.45,
+        "category": 'bread sticks',
+        "popularity": 90,
+        "rating": 55,
+        "tags": ['warm', 'eggs', "man"]
+    },
+    {
+        "name": 'ground beef and rice',
+        "price": 10.00,
+        "category": 'soysause',
+        "popularity": 78,
+        "rating": 99,
+        "tags": ['spice', 'meat', "kyle's"]
+    },
+    {
+        "name": 'noodles',
+        "price": 14.99,
+        "category": 'slider',
+        "popularity": 86,
+        "rating": 52,
+        "tags": ['sause', 'butter', "rich"]
+    },
+    {
+        "name": 'adobo',
+        "price": 12.99,
+        "category": 'rice',
+        "popularity": 100,
+        "rating": 96,
+        "tags": ['sweet', 'chicken', "poor"]
+    },
+    {
+        "name": 'taco',
+        "price": 12.99,
+        "category": 'fries',
+        "popularity": 40,
+        "rating": 26,
+        "tags": ['meat', 'cheese', "man"]
+    }
+]
 
 
 
@@ -115,9 +160,19 @@ console.log(pizza['tags'][1]);
 */
 
 //CODE HERE
+/*filteredFood = (tag, callback) =>{
+    let foodWithTag = []
+    for(i = 0; i < foodArr.length; i++){
+        if(foodArr[i].tags.include(tag) === true){
+            foodWithTag.push(foodArr[i]);
+        }
+    }
+    callback(foodWithTag);
+} */
 
-// const filteredFood = foodArr.filter(/* CALLBACK HERE */)
+const filteredFood = foodArr.filter(tag => tag.tags[2] === "man") 
 
+console.log(filteredFood);
 
 
 //////////////////PROBLEM 5////////////////////
@@ -160,6 +215,16 @@ console.log(pizza['tags'][1]);
 */
 
 //CODE HERE
+filterByProperty = (property, number, type) =>{
+    let filteredArr = foodArr.filter(loc => {
+        if (type === "above"){
+           return loc[property] > number;
+        } else {
+            return loc[property] < number;
+        }
+    });
+    return filteredArr;
+}
 
 
 /*
@@ -170,3 +235,4 @@ console.log(pizza['tags'][1]);
 */
 
 //CODE HERE
+console.log(filterByProperty("price", 10, "above"));
