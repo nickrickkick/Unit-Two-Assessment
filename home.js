@@ -24,7 +24,7 @@
 //CODE HERE
 greetUser = username => `Welcome back, ${username}`;
 
-console.log(greetUser("kyle"));
+//console.log(greetUser("kyle"));
 
 
 
@@ -51,8 +51,22 @@ console.log(greetUser("kyle"));
 const deliveryAreaZipCodes = [85205, 85204, 85203, 85213, 85206]
 
 //CODE HERE
+canWeDeliver = zipCode =>{
+    let zipperSpot = false;
+      for(i = 0; i < deliveryAreaZipCodes.length; i++){
+        if(zipCode === deliveryAreaZipCodes[i]){
+          zipperSpot = true;
+        }
+      }
+    if (zipperSpot === true){
+        return `You're in our delivery zone!`;
+    } else {
+        return `Sorry, we can't deliver to that address`;
+    }
+}
 
-
+console.log(canWeDeliver(85205));
+console.log(canWeDeliver(88888));
 
 /* 
     Problem 2 Continued
