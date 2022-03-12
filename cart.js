@@ -55,7 +55,10 @@ console.log(summedPrice);
 */
 
 //CODE HERE
-
+calcFinialPrice = (cartTotal, couponValue, tax) =>{
+    return cartTotal * (1 + tax) - couponValue;
+}
+console.log(calcFinialPrice(26.97, 10, .06));
 
 
 //////////////////PROBLEM 3////////////////////
@@ -80,6 +83,11 @@ console.log(summedPrice);
 
 /*
     TEXT ANSWER HERE
+    name - [string] for keeping track of who this is.
+    fav food to buy - [string] this will help us know what to keep better stock of and which to keep a lower stock of so we dont have to over spend on food
+    avg spend - [int] learn what they will spend on avg so we can adjust prices to keep them coming
+    quantity bought - [int] understand what is being bought so we can restock at the right times.
+    how often to come back per week [int] to see what we need to change so we can keep them coming back.
 
 */
 
@@ -89,3 +97,10 @@ console.log(summedPrice);
 */
 
 //CODE HERE
+let customer = {
+    name : "kyle",
+    favFood : "pizza",
+    avgSpend : 25,
+    quantityOfFood: 4,
+    comebackPerWeek: 3 
+};
