@@ -22,8 +22,9 @@
 */
 
 //CODE HERE
+greetUser = username => `Welcome back, ${username}`;
 
-
+console.log(greetUser("kyle"));
 
 
 
