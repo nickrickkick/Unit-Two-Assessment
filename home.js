@@ -65,8 +65,8 @@ canWeDeliver = zipCode =>{
     }
 }
 
-console.log(canWeDeliver(85205));
-console.log(canWeDeliver(88888));
+//console.log(canWeDeliver(85205));
+//console.log(canWeDeliver(88888));
 
 /* 
     Problem 2 Continued
@@ -86,7 +86,15 @@ console.log(canWeDeliver(88888));
 */
 
 // CODE HERE
-
+canWeDeliverTwo = zipCode => {
+    if(deliveryAreaZipCodes.includes(zipCode) === true){
+        return `You're in our delivery zone!`;
+    } else {
+        return `Sorry, we can't deliver to that address`;
+    } 
+}
+console.log(canWeDeliverTwo(85205));
+console.log(canWeDeliverTwo(88888));
 
 //////////////////PROBLEM 3////////////////////
 /* 
