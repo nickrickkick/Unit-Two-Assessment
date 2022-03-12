@@ -31,6 +31,14 @@
 */
 
 //CODE HERE
+let pizza ={
+    name: 'pizza',
+    price: 12.99,
+    category: 'bread sticks',
+    popularity: 100,
+    rating: 96,
+    tags: ['sause', 'cheese', "kids"]
+}
 
 
 
@@ -43,6 +51,7 @@
 */
 
 //CODE HERE
+console.log(pizza.popularity);
 
 
 /*
@@ -53,6 +62,8 @@
 */
 
 //CODE HERE
+console.log(pizza.tags[1]);
+console.log(pizza['tags'][1]);
 
 
 /*
